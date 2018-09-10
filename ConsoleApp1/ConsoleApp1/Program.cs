@@ -14,7 +14,7 @@ namespace ConsoleApp1
             // and assign it a value of "true". Use this variable to 
             // know when to exit the while loop.
             bool keepGoing = true;
-
+            Console.Write("Is this working?");
             // TODO Define a while loop.
             // Keep looping as long as the variable "keepGoing" has a value of "true".
             while (keepGoing)
