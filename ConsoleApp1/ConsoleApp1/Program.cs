@@ -11,7 +11,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
            
-                int runningTotal = 0;
+            double runningTotal = 0;
             bool keepGoing = true;
             while (keepGoing)
             {
@@ -28,7 +28,7 @@ namespace ConsoleApp1
                     try
                     {
                         // Add minutes exercised to total 
-                        int minutes = int.Parse(entry);
+                        double minutes = double.Parse(entry);
 
                         if (minutes <= 0)
                         {
