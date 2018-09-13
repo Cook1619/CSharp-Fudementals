@@ -11,24 +11,22 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
            
-            double runningTotal = 0;
-            bool keepGoing = true;
-            while (keepGoing)
+            var runningTotal = 0.0;
+  
+            while (true)
             {
                 // Prompt user for minutes exercised 
                 Console.Write("Enter how many minutes you exercised or type \"quit\" to exit: ");
-                string entry = Console.ReadLine();
+                var entry = Console.ReadLine();
 
                 if (entry == "quit")
                 {
-                    keepGoing = false;
+                    break;
                 }
-                else
-                {
                     try
                     {
                         // Add minutes exercised to total 
-                        double minutes = double.Parse(entry);
+                        var minutes = double.Parse(entry);
 
                         if (minutes <= 0)
                         {
@@ -52,7 +50,7 @@ namespace ConsoleApp1
                             Console.WriteLine("Okay, now you're just showing off!");
                         }
 
-                        runningTotal = runningTotal + minutes;
+                        runningTotal += minutes;
                     }
                     catch (FormatException)
                     {
@@ -62,7 +60,6 @@ namespace ConsoleApp1
 
                     // Display total minutes exercised to the screen 
                     Console.WriteLine("You've entered " + runningTotal + " minutes.");
-                }
                 // Repeat until user quits
             }
             Console.WriteLine("Goodbye");
